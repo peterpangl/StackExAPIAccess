@@ -1,0 +1,31 @@
+This Python (Python version 2.7) program retrieves data from the StackExchange API and calculates some statistics.
+
+Retrieves the StackOverflow answer data for a given date/time range from the StackExchange API (https://api.stackexchange.com/docs/answers).
+Retrieves the comment data for a given set of answers (https://api.stackexchange.com/docs/comments­on­answers).
+
+For a given date/time range that is given as input (see "Run the application") calculates:
+- the total number of accepted answers.
+- the average score for all the accepted answers.
+- the average answer count per question.
+- the comment count for each of the 10 answers with the highest score.
+- collects and returns the calculated statistics in JSON format
+
+-*- Installation -*-
+
+Fetch the project and run:
+python setup.py install
+the build directory will be created.
+
+
+-*- Run the application -*-
+
+Enter in the stackexapi directory and run the following command:
+> python stackstats.py --since "'2018-01-01 10:00:00'" --until "'2018-01-01 11:30:00'" [--output-format json]
+
+wait for a while and the statistics in json format will be printed
+
+
+-*- Run the test cases -*-
+
+Enter in the tests directory and run the following command:
+> python test_utils.py
